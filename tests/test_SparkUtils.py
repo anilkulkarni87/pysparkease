@@ -15,7 +15,7 @@ def test_remove_nulls(spark):
             ("222222222", "202"),
             ("000000000", "302"),
         ],
-        schema=["account_number", "business_line_id"],
+        schema=["account_number", "business_line_id1"],
     )
     resultDF = SparkUtils.remove_nulls(accountsDf, "business_line_id")
     assert resultDF.count() == 2
